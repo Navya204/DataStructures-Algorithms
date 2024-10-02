@@ -11,6 +11,7 @@
         return largest;
     }
 }
+//Time Complexity: O(n)
 
 2.Second largest 
  class Solution {
@@ -28,4 +29,5 @@
         return slargest;
     }
 }
+//Time Complexity :O(n)
 
