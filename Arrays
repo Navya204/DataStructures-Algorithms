@@ -1,1 +1,14 @@
+1.Largest Element
+   class Solution {
+    public static int largest(int[] arr) {
+        // code here
+        int largest=arr[0];
+        for(int i=1;i<=arr.length-1;i++){
+            if(arr[i]>largest){
+                largest=arr[i];
+            }
+        }
+        return largest;
+    }
+}
 
