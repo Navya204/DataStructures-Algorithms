@@ -1,0 +1,36 @@
+1.Reverse words in a String
+   class Solution {
+    public String reverseWords(String s) {
+        StringBuilder sc=new StringBuilder();
+        String[] words=s.trim().split("\\s+");
+        for(int i=words.length-1;i>=0;i--){
+            if(!words[i].isEmpty()){
+                sc.append(words[i]);
+            }
+            if(i!=0){
+                sc.append(" ");
+            }
+        }
+        return sc.toString().trim();  
+    }
+}
+
+
+
+2.Merge Strings Alternatively
+   class Solution {
+    public String mergeAlternately(String word1, String word2) {
+        StringBuilder sc=new StringBuilder();
+        int minLength=Math.min(word1.length(),word2.length());
+        for(int i=0;i<minLength;i++){
+            sc.append(word1.charAt(i));
+            sc.append(word2.charAt(i));
+        }
+        if(word1.length()>word2.length()){
+            sc.append(word1.substring(minLength));
+        }else if(word1.length()<word2.length()){
+             sc.append(word2.substring(minLength));
+        }
+        return sc.toString();  
+    }
+}
